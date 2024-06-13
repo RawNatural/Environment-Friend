@@ -78,18 +78,16 @@ $charge = \Stripe\Charge::create([
     
     //check payment status
     //include("webhook.php");
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+    $status = $charge['status'];
+
+    echo $status;
+
+
+
+
     $itemName = "CHANGE THIS TO BE AN ITEM LIST";
     $itemNumber = 1234;
     
@@ -110,7 +108,6 @@ $charge = \Stripe\Charge::create([
         $amount = $charge['amount'];
         $balance_transaction = $charge['balance_transaction'];
         $currency = $charge['currency'];
-        $status = $charge['status'];
         $date = date("Y-m-d H:i:s");
         
         //include database config file
@@ -134,7 +131,19 @@ paid_amount_currency,txn_id,payment_status,created,modified) VALUES
             $statusMsg = "<h2>Transaction Successful.</h2>
             <h4>Amount Paid = ".'$'."$priceSum AUD</h4>
             <h4>Order ID: {$last_insert_id}</h4>";
-            include("sendOrderToMe.php");
+
+
+
+
+            //include("sendOrderToMe.php");
+
+
+
+
+
+
+
+
             
             //CLear from session
             unset($priceSum);

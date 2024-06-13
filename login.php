@@ -49,7 +49,7 @@ if (isset($_GET['UsernameLogin'])){
                 $lastPage = $_SESSION['lastPage'];
                 header('Location: $lastPage');
             } else {
-                header("Location: shop.php");
+                header("Location: index.php");
             }
         }
     }

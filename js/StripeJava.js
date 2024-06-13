@@ -25,9 +25,11 @@ var StripeJava = (function () {
             //display the errors on the form
             //$(".payment-errors").html(response.error.message);
         } else {
+            alert("hi");
             var form$ = $("#paymentFrm");
             //get token id
             var token = response['id'];
+            alert(token);
             //insert the token into the form
             form$.append("<input type='hidden' name='stripeToken' value='" 
     + token + "' />");

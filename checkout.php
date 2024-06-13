@@ -1,8 +1,5 @@
 <!-- Stripe JavaScript library -->
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<!-- jQuery is used only for this example; it isn't required to use Stripe -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 
     <?php $scriptList = array('js/jquery3.3.js', 'js/Checkout.js', 'js/FillForm.js', 'js/StripeJava.js');
     include("header.php");?>
@@ -92,7 +89,7 @@
             </p>
             <p>
                 <label for="cardValidation">CVC:</label>
-                <input type="text" class="short" maxlength="4" name="cvc" value="123" id="cardValidation" autocomplete="off" required <?php
+                <input type="text" class="short card-cvc" maxlength="4" name="cvc" value="123" id="cardValidation" autocomplete="off" required <?php
                 $box = 'cardValidation'; include('fillBox.php'); ?>
                 >
             </p>
